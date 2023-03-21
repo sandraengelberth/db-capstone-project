@@ -4,11 +4,11 @@ CREATE
     SQL SECURITY DEFINER
 VIEW `BestSellers` AS
     SELECT 
-        `Menu`.`MenuID` AS `MenuID`
+        `Menu`.`MenuName` AS `MenuName`
     FROM
         `Menu`
     WHERE
-        `Menu`.`MenuID` IN (SELECT 
+        `Menu`.`MenuName` IN (SELECT 
                 `Orders`.`Quantity`
             FROM
                 `Orders`
