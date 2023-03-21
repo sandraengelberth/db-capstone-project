@@ -1,4 +1,7 @@
-PREPARE GetOrderDetail FROM 'SELECT OrderID, Quantity, TotalCost From Orders WHERE BookingID = ?';
+PREPARE GetOrderDetail 
+FROM 'SELECT OrderID, Quantity, TotalCost 
+FROM Orders
+WHERE BookingID = ?';
 
-SET @id =1;
+SET @id = 1;
 EXECUTE GetOrderDetail USING @id;
